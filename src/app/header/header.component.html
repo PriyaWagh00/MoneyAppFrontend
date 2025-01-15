@@ -1,0 +1,111 @@
+<header class="navbar">
+    <div class="logo-container">
+      <a href="#" class="logo" routerLink="/home">Paytm</a>
+    </div>
+    
+    <nav class="navbar-links">
+      <!-- Dropdown for Paytm for Consumer -->
+      <div class="dropdown">
+        <a href="#" class="dropbtn">
+          Paytm for Consumer <i class="fas fa-caret-down"></i>
+        </a>
+        <div class="dropdown-content">
+          <a href="#"><i class="fas fa-wallet"></i> Wallet</a>
+          <a href="#"><i class="fas fa-sync-alt"></i> Recharge</a>
+          <a href="#"><i class="fas fa-bill"></i> Pay Bills</a>
+          <!-- <a href="#"><i class="fas fa-shopping-cart"></i> Shop</a> -->
+          <a href="#"><i class="fas fa-history"></i> History</a>
+        </div>
+      </div>
+      
+      <div class="dropdown">
+        <a href="#" class="dropbtn">
+          Paytm for Business <i class="fas fa-caret-down"></i>
+        </a>
+        <div class="dropdown-content">
+          <a href="#"><i class="fas fa-store"></i> Start Business</a>
+          <a href="#"><i class="fas fa-chart-line"></i> Business Dashboard</a>
+          <a href="#"><i class="fas fa-credit-card"></i> Payments Gateway</a>
+          <a href="#"><i class="fas fa-cogs"></i> Business Solutions</a>
+        </div>
+      </div>
+
+     
+
+
+
+      
+  <div class="a">
+      <!-- Simple Nav Links -->
+      <a>Investor Relations</a></div>
+      <div class="a">
+      <a>Company</a></div>
+      <div class="a"  style="cursor: pointer;"
+      routerLink="/notification"> <a >Notification  
+        <i class="fa fa-bell" style="font-size: 1.1rem;" routerLink="/notification"></i>
+      </a></div>
+      <div style="position: relative; display: inline-block;margin-top: 5px;font-size: 1rem;cursor: pointer;" routerLink="/notification" >
+       
+        <!-- <i 
+          class="fa fa-bell"
+          style="font-size: 24px; cursor: pointer;"
+          (click)="openNotificationComponent()"
+        ></i> -->
+       
+        <span
+          *ngIf="unreadCount > 0"
+          style="position: absolute; top: 0; right: 0; background: red; color: white; border-radius: 50%; padding: 2px 6px; font-size: 12px;"
+        >
+          {{ unreadCount }}
+        </span>
+      </div>
+      
+      
+    
+    </nav>
+    
+    <div class="auth-section">
+      <!-- <button class="signin-btn">
+      <a routerLink="/login"  ><i class="fas fa-sign-in-alt" ></i> login</a>
+        
+      </button>
+      <div class="user-icon">
+        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="User Avatar">
+      </div> -->
+
+
+
+<!-- Login Button and User Avatar -->
+<div class="user-container">
+  <!-- Check if username exists -->
+  <ng-container *ngIf="username; else loginPrompt">
+    <!-- User Avatar with Dropdown -->
+    <div class="user-icon-container">
+      <div class="user-icon">
+        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="User Avatar" />
+      </div>
+      <ul class="user-dropdown">
+        <li><strong>{{ username }}</strong></li>
+        <li>
+          <a
+            style="color: red; cursor: pointer;"
+            (click)="logout()"
+            ><i class="fas fa-sign-out-alt"></i> Logout</a
+          >
+        </li>
+      </ul>
+    </div>
+  </ng-container>
+
+  <!-- Login Button -->
+  <ng-template #loginPrompt>
+    <button class="signin-btn">
+      <a routerLink="/login"><i class="fas fa-sign-in-alt"></i> Login</a>
+    </button>
+  </ng-template>
+</div>
+
+
+    </div>
+  </header>
+  

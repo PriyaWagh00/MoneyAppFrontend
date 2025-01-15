@@ -1,0 +1,102 @@
+/* General Styles */
+.recharge-section {
+  padding: 20px 40px;
+  background-color: #f8f9fa;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.recharge-section h2 {
+  font-size: 1.8rem;
+  color: #0b3d91;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Services Row */
+.services-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap; /* Ensures the layout adjusts for smaller screens */
+}
+
+/* Service Card */
+.service-card {
+  width: 120px;
+  height: 120px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styles */
+.service-card i {
+  font-size: 2rem;
+  color: #0b3d91;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover i {
+  color: #062a68;
+}
+
+/* Text Styles */
+.service-card p {
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* All Services Special Card */
+.all-services {
+  background-color: #0b3d91;
+  color: #fff;
+}
+
+.all-services p {
+  color: #ffffff;
+}
+
+.all-services:hover {
+  background-color: #062a68;
+}
+
+.all-services:hover i {
+  color: #e6e6e6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-row {
+    gap: 10px;
+  }
+
+  .service-card {
+    width: 100px;
+    height: 100px;
+  }
+
+  .service-card i {
+    font-size: 1.6rem;
+  }
+
+  .service-card p {
+    font-size: 0.8rem;
+  }
+}

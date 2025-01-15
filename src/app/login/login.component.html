@@ -1,0 +1,51 @@
+
+<app-pay></app-pay>
+
+<div class="container">
+  <div class="form-container">
+    <h2>Login</h2>
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+
+    <form (ngSubmit)="onLoginSubmit()">
+   
+
+   
+
+      <div class="input-group">
+        <input
+          type="email"
+          [(ngModel)]="loginModel.email"
+          (input)="loginModel.email = loginModel.email.toLowerCase()"
+          placeholder="Email"
+          name="email"
+          required
+        />
+        <div *ngIf="!loginModel.email?.endsWith('@gmail.com')" class="error">
+          <small *ngIf="loginModel.email">Only Gmail addresses are allowed</small>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <input
+          type="password"
+          [(ngModel)]="loginModel.password"
+          placeholder="Password"
+          name="password"
+          required
+        />
+      </div>
+
+      <button type="submit" class="submit-btn">Login</button>
+    </form>
+
+    <div class="switch">
+      <label routerLink="/signup">Don't have an account? <span>Sign Up</span></label>
+      <br><br>
+      <label routerLink="/forget">Don't Remember Password? <span>Forget Password</span></label>
+    </div>
+  </div>
+</div>
+<!-- <app-footer></app-footer> -->

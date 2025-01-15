@@ -1,0 +1,262 @@
+/* General Container */
+.transaction-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Card styling */
+  .card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .card-header {
+    background-color: #007bff;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-footer {
+    background-color: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #e9ecef;
+  }
+  
+  /* Success/Error Message */
+  .message {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1rem;
+    color: #d9534f; /* Default error color */
+  }
+  
+  .message.success {
+    color: #5cb85c; /* Success color */
+  }
+  
+  /* Form Styling */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-control {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+  }
+  
+  .btn-outline-secondary {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .btn-outline-secondary:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #ffffff;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-outline-danger {
+    background-color: transparent;
+    color: #d9534f;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #d9534f;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn-outline-danger:hover {
+    background-color: #d9534f;
+    color: #ffffff;
+  }
+  
+  /* Dialpad Styling */
+  .dialpad {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 280px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .dialpad-container {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dialpad-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .dialpad-buttons {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .dialpad-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dialpad-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-close {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .btn-close:hover {
+    color: #d9534f;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .card {
+      width: 90%;
+    }
+  
+    .dialpad {
+      width: 90%;
+      height: auto;
+      bottom: 10px;
+      right: 5%;
+    }
+  }
+  
+
+
+
+
+  .username-display {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #007bff;
+  }
+  
+  .message {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #d9534f;
+  }
+  
+
+
+
+  .message {
+    font-weight: bold; /* Makes the text bold */
+    font-size: 18px; /* Adjusts font size */
+    color: #ffffff; /* White text color */
+    background-color: red; /* A soothing green background */
+    border: 2px solid #388e3c; /* Adds a darker green border */
+    border-radius: 8px; /* Rounds the corners */
+    padding: 12px 16px; /* Adds padding for better spacing */
+    margin: 16px 0; /* Adds spacing around the message */
+    text-align: center; /* Centers the text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    animation: fadeIn 0.5s ease-in-out; /* Adds a fade-in effect */
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

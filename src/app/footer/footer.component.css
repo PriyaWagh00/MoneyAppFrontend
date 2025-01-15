@@ -1,0 +1,101 @@
+.footer {
+  background-color: #0b3d91;
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ffffff33;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.download-app h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.download-app ul {
+  list-style: none;
+  padding: 0;
+}
+
+.download-app li {
+  margin-bottom: 10px;
+}
+
+.download-app a {
+  text-decoration: none;
+  color: #d1e3ff;
+  font-size: 1rem;
+}
+
+.download-app a i {
+  margin-right: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #d1e3ff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.footer-section {
+  flex: 1 1 calc(25% - 20px);
+  min-width: 150px;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #d1e3ff;
+}
+
+.footer-section h4 span {
+  font-weight: bold;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #d1e3ff;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.footer-section span {
+  font-weight: bold;
+}

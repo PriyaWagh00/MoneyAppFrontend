@@ -1,0 +1,33 @@
+<!-- <app-header></app-header>
+<router-outlet></router-outlet>
+
+
+<div *ngIf="isHomePage">
+  <app-wallet></app-wallet>
+  <app-money-transfer></app-money-transfer>
+  <app-pffer></app-pffer>
+  <app-quick-action></app-quick-action>
+
+</div>
+
+<app-footer></app-footer> -->
+
+
+
+
+<!-- Header (hidden on login page) -->
+<app-header *ngIf="!isLoginPage"></app-header>
+
+<!-- Router Outlet for routing -->
+<router-outlet></router-outlet>
+
+<!-- Content displayed only on the home page -->
+<div *ngIf="isHomePage">
+  <app-wallet></app-wallet>
+  <app-money-transfer></app-money-transfer>
+  <app-pffer></app-pffer>
+  <!-- <app-quick-action></app-quick-action> -->
+</div>
+
+<!-- Footer (hidden on login page) -->
+<app-footer *ngIf="!isLoginPage"></app-footer>

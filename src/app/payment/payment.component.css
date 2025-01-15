@@ -1,0 +1,127 @@
+.payment-container {
+  max-width: 450px;
+  margin: 70px auto 100px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.payment-container h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.payment-container .user-details {
+  margin-bottom: 30px;
+}
+
+.payment-container .user-details p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.payment-container .payment-details {
+  margin-top: 30px;
+}
+
+.payment-container .payment-details label {
+  font-size: 1.2rem;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.payment-container .payment-details input {
+  width: 95%;
+  padding: 15px;
+  font-size: 1.2rem;
+  color: #333;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.payment-container .payment-details input:focus {
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+.payment-container .pay-btn {
+  background-color: #28a745;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.payment-container .pay-btn:hover {
+  background-color: #218838;
+}
+
+.payment-container .pin-input-container {
+  margin-top: 20px;
+}
+
+.payment-container .pin-input-container input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  color: #333;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.payment-container .pin-input-container button {
+  background-color: #ff5722;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.payment-container .pin-input-container button:hover {
+  background-color: #e64a19;
+}
+
+.payment-container .done-message {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4caf50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-container .done-message p {
+  margin-left: 8px;
+}
+
+.payment-container .isLoading {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #999;
+}

@@ -1,0 +1,56 @@
+<!-- <div class="balance-check">
+    <h2>Balance Check</h2>
+    <div *ngIf="balance !== null; else loading">
+      <p *ngIf="balance > 0">
+        Your current balance: <strong>{{ balance | currency }}</strong>
+      </p>
+      <p *ngIf="balance === 0">
+        Balance not available. Please try again later.
+      </p>
+    </div>
+    <ng-template #loading>
+      <p>Fetching your balance...</p>
+    </ng-template>
+  </div>
+   -->
+
+
+
+   <div class="balance-check-container">
+    <h2>Balance Check</h2>
+  
+    <div *ngIf="!pinVerified">
+      <label for="pinInput">Enter PIN:</label>
+      <input
+        id="pinInput"
+        type="password"
+        [(ngModel)]="pin"
+        placeholder="Enter 4-digit PIN"
+        maxlength="4"
+      />
+      <button (click)="verifyPin()" class="btn">Verify PIN</button>
+    </div>
+  
+    <div *ngIf="pinVerified">
+      <div *ngIf="balance !== null; else loading">
+        <p *ngIf="balance > 0">
+          Your current balance:
+          <!-- <br> <strong style="font-size: 3rem;">{{ balance | currency }}</strong> -->
+          <br> <strong style="font-size: 3rem;">{{ balance | currency: 'INR' }}</strong>
+
+        </p>
+        <p *ngIf="balance === 0">
+          Your balance is currently <strong>0</strong>.
+        </p>
+  
+        <div *ngIf="showSuccessMark" class="success-checkmark">
+          <i class="fas fa-check-circle"></i>
+          <p>Balance successfully fetched!</p>
+        </div>
+      </div>
+      <ng-template #loading>
+        <p>Fetching your balance...</p>
+      </ng-template>
+    </div>
+  </div>
+  

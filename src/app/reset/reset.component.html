@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="form-container">
+      <h2>Reset Password</h2>
+  
+      <div *ngIf="message" class="info-message">
+        {{ message }}
+      </div>
+  
+      <form (ngSubmit)="onResetPasswordSubmit()">
+        <!-- Token Input -->
+        <div class="input-group">
+          <input
+            type="text"
+            [(ngModel)]="token"
+            placeholder="Enter your reset token"
+            name="token"
+            required
+          />
+        </div>
+  
+        <!-- New Password Input -->
+        <div class="input-group">
+          <input
+            type="password"
+            [(ngModel)]="newPassword"
+            placeholder="Enter your new password"
+            name="newPassword"
+            required
+          />
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Reset Password</button>
+      </form>
+    </div>
+  </div>
+  

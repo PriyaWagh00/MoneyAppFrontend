@@ -1,0 +1,269 @@
+<!-- <div class="transaction-history">
+  <h2>Transaction History</h2>
+
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="transactions.length > 0; else noHistory">
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>To/From</th>
+          <th>Amount</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of transactions">
+          <td>{{ transaction.type }}</td>
+          <td>{{ transaction.type === 'Sent'  }}</td>
+          <td>{{ transaction.amount | currency }}</td>
+          <td>{{ transaction.timestamp | date:'short' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ng-template #noHistory>
+    <p>No transaction history found.</p>
+  </ng-template>
+</div> -->
+
+
+
+<!-- 
+<div class="transaction-history">
+  <h2>Transaction History</h2>
+
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="transactions.length > 0; else noHistory">
+    <div class="transaction-card" *ngFor="let transaction of transactions">
+      <div class="card-header">
+        <span class="transaction-type" [class.sent]="transaction.type === 'Sent'" [class.received]="transaction.type === 'Received'">
+      
+          {{ transaction.type }}
+        </span>
+        <span class="transaction-time">
+          {{ transaction.timestamp | date: 'short' }}
+        </span>
+      </div>
+      <div class="card-body">
+        <p class="transaction-name">
+          {{ transaction.type === 'Sent' ? 'To: ' + transaction.to : 'From: ' + transaction.from }}
+        </p>
+        <p class="transaction-amount">{{ transaction.amount | currency: 'INR' }}</p>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noHistory>
+    <p class="no-history">No transaction history found.</p>
+  </ng-template>
+</div> -->
+
+
+
+
+
+<!-- 
+<div class="transaction-history">
+  <h2>Transaction History</h2>
+
+ 
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  
+  <div *ngIf="transactions.length > 0; else noHistory">
+    <div class="transaction-card" *ngFor="let transaction of transactions">
+      <div class="card-header">
+       
+        <span
+          class="transaction-type"
+          [class.sent]="transaction.type === 'Sent'"
+          [class.received]="transaction.type === 'Received'"
+        >
+          {{ transaction.type }}
+        </span>
+       
+        <span class="transaction-time">
+          {{ transaction.timestamp | date: 'short' }}
+        </span>
+      </div>
+
+   
+      <div class="card-body">
+        <p class="transaction-name">
+          {{ transaction.type === 'Sent' ? 'To: ' + transaction.to : 'From: ' + transaction.from }}
+        </p>
+        <p class="transaction-amount">
+          {{ transaction.amount | currency: 'INR' }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <ng-template #noHistory>
+    <p class="no-history">No transaction history found.</p>
+  </ng-template>
+</div>
+
+-->
+
+
+<!-- 
+<div class="transaction-history">
+  <h2>Transaction History</h2>
+
+  
+ 
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+ 
+  <div *ngIf="transactions.length > 0; else noHistory">
+    <div class="transaction-card" *ngFor="let transaction of transactions">
+      <div class="card-header">
+    
+        <span
+          class="transaction-type"
+          [class.sent]="transaction.type === 'Sent'"
+          [class.received]="transaction.type === 'Received'"
+        >
+          {{ transaction.type }}
+        </span>
+      
+
+
+        <span class="transaction-time">
+          {{ transaction.timestamp | date: 'short' }}
+        </span>
+      </div>
+
+     
+      <div class="card-body">
+        <p class="transaction-name">
+          {{ transaction.type === 'Sent' ? 'To: ' + transaction.to : 'From: ' + transaction.from }}
+        </p>
+        <p class="transaction-amount">
+          {{ transaction.amount | currency: 'INR' }}
+        </p>
+      </div>
+    </div>
+
+
+
+    <button *ngIf="transactions.length > 0" id="w"   class="btn btn-primary mb-3" (click)="downloadStatementPDF()">Download PDF Statement</button>
+
+  </div>
+
+
+
+
+  <ng-template #noHistory>
+    <p class="no-history">No transaction history found.</p>
+  </ng-template> -->
+
+
+<!-- 
+
+  <div class="transaction-card" *ngFor="let transaction of transactions">
+    <div class="card-header">
+      <span class="transaction-type"
+      [class.sent]="transaction.type === 'Sent'"
+      [class.received]="transaction.type === 'Received'"
+      [class.failed]="transaction.status === 'FAILED'">
+  {{ transaction.status === 'FAILED' ? 'Failed' : transaction.type }}
+</span>
+
+      <span class="transaction-time">
+        {{ transaction.timestamp | date: 'short' }}
+      </span>
+    </div>
+    <div class="card-body">
+      <p class="transaction-name">
+        {{ transaction.status === 'FAILED' ? 'Reason: ' + transaction.reason : (transaction.type === 'Sent' ? 'To: ' + transaction.to : 'From: ' + transaction.from) }}
+      </p>
+      <p class="transaction-amount">
+        {{ transaction.amount | currency: 'INR' }}
+      </p>
+    </div>
+  </div>
+   -->
+
+
+   <!-- <div class="transaction-card" *ngFor="let transaction of transactions">
+    <div class="card-header">
+      <span class="transaction-type"
+        [class.sent]="transaction.type === 'Sent'"
+        [class.received]="transaction.type === 'Received'"
+        [class.failed]="transaction.status === 'FAILED'">
+        {{ transaction.status === 'FAILED' ? 'Failed' : transaction.type }}
+      </span>
+      <span class="transaction-time">
+        {{ transaction.timestamp | date: 'short' }}
+      </span>
+    </div>
+    <div class="card-body">
+      <p class="transaction-name">
+        {{ transaction.status === 'FAILED' ? 'Reason: ' + transaction.reason : (transaction.type === 'Sent' ? 'To: ' + transaction.to : 'From: ' + transaction.from) }}
+      </p>
+      <p class="transaction-amount">
+        {{ transaction.amount | currency: 'INR' }}
+      </p>
+    </div>
+  </div>
+   -->
+
+   <div class="transaction-history">
+    <h2>Transaction History</h2>
+  
+    
+   
+    <div *ngIf="errorMessage" class="error">
+      {{ errorMessage }}
+    </div>
+   <div *ngIf="transactions.length > 0; else noHistory">
+   <div class="transaction-card" *ngFor="let transaction of transactions">
+    <div class="card-header">
+      <span class="transaction-type"
+        [class.sent]="transaction.type === 'Sent' && transaction.status !== 'FAILED'"
+        [class.received]="transaction.type === 'Received' && transaction.status !== 'FAILED'"
+        [class.failed]="transaction.status === 'FAILED'">
+        {{ transaction.status === 'FAILED' ? 'Failed' : transaction.type }}
+      </span>
+      <span class="transaction-time">
+        {{ transaction.timestamp | date: 'short' }}
+      </span>
+    </div>
+    <div class="card-body">
+      <p class="transaction-name">
+        {{ transaction.status === 'FAILED' ? 'Reason: ' + transaction.reason : (transaction.type === 'Sent' ? 'To: ' + transaction.to : 'From: ' + transaction.from) }}
+      </p>
+      <p class="transaction-amount">
+        {{ transaction.amount | currency: 'INR' }}
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+<button *ngIf="transactions.length > 0" id="w"   class="btn btn-primary mb-3" (click)="downloadStatementPDF()">Download PDF Statement</button>
+
+</div>
+
+
+
+
+<ng-template #noHistory>
+<p class="no-history">No transaction history found.</p>
+</ng-template> 

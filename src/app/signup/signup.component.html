@@ -1,0 +1,223 @@
+<!-- 
+
+<div class="container">
+  <div class="form-container">
+    <h2>Sign Up</h2>
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+
+    <form (ngSubmit)="onSignupSubmit(signupForm)" #signupForm="ngForm">
+     
+
+      <div class="input-group">
+        <input
+          [(ngModel)]="signupModel.name"
+          name="name"
+          type="text"
+          placeholder="Full Name"
+          required
+          [ngModelOptions]="{ standalone: true }"
+          #name="ngModel"
+        />
+        <div *ngIf="name.touched && name.invalid" class="error">
+          <small *ngIf="name.errors?.['required']">Name is required</small>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <input
+          [(ngModel)]="signupModel.email"
+          name="email"
+          type="email"
+          placeholder="Email"
+          required
+          [ngModelOptions]="{ standalone: true }"
+          #email="ngModel"
+          (input)="onEmailInput(email)"
+        />
+        <div *ngIf="email.touched && email.invalid" class="error">
+          <small *ngIf="email.errors?.['required']">Email is required</small>
+          <small *ngIf="email.errors?.['email']">Invalid email format</small>
+          <small *ngIf="!email.valid && signupModel.email && !isLowercase(signupModel.email)">Email must be in lowercase</small>
+          <small *ngIf="!email.valid && signupModel.email && !signupModel.email.endsWith('@gmail.com')">
+            Only Gmail email addresses are allowed
+          </small>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <input 
+          [(ngModel)]="signupModel.mobile"
+          name="phone"
+          type="text"
+          placeholder="Phone Number"
+          required
+          [ngModelOptions]="{ standalone: true }"
+          #phone="ngModel"
+          pattern="^\+?[0-9]{10,15}$"
+        />
+        <div *ngIf="phone.touched && phone.invalid" class="error">
+          <small *ngIf="phone.errors?.['required']">Phone number is required</small>
+          <small *ngIf="phone.errors?.['pattern']">Invalid phone number format</small>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <input
+          [(ngModel)]="signupModel.password"
+          name="password"
+          type="password"
+          placeholder="Password"
+          required
+          minlength="6"
+          [ngModelOptions]="{ standalone: true }"
+          #password="ngModel"
+        />
+        <div *ngIf="password.touched && password.invalid" class="error">
+          <small *ngIf="password.errors?.['required']">Password is required</small>
+          <small *ngIf="password.errors?.['minlength']">Password must be at least 6 characters long</small>
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="!signupForm.valid" class="submit-btn">
+        Sign Up
+      </button>
+    </form>
+
+    <div class="switch">
+      <label routerLink="/login">Already have an account? <span>Login</span></label>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="form-container">
+    <h2>Sign Up</h2>
+
+    <!-- Error Message -->
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+
+    <form (ngSubmit)="onSignupSubmit(signupForm)" #signupForm="ngForm">
+      <!-- Full Name -->
+      <div class="input-group">
+        <input
+          [(ngModel)]="signupModel.name"
+          name="name"
+          type="text"
+          placeholder="Full Name"
+          required
+          [ngModelOptions]="{ standalone: true }"
+          #name="ngModel"
+        />
+        <div *ngIf="name.touched && name.invalid" class="error">
+          <small *ngIf="name.errors?.['required']">Name is required</small>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="input-group">
+        <input
+          [(ngModel)]="signupModel.email"
+          name="email"
+          type="email"
+          placeholder="Email"
+          required
+          [ngModelOptions]="{ standalone: true }"
+          #email="ngModel"
+          (input)="onEmailInput(email)"
+        />
+        <div *ngIf="email.touched && email.invalid" class="error">
+          <small *ngIf="email.errors?.['required']">Email is required</small>
+          <small *ngIf="email.errors?.['email']">Invalid email format</small>
+          <small *ngIf="!email.valid && signupModel.email && !isLowercase(signupModel.email)">
+            Email must be in lowercase
+          </small>
+          <small *ngIf="!email.valid && signupModel.email && !signupModel.email.endsWith('@gmail.com')">
+            Only Gmail email addresses are allowed
+          </small>
+        </div>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="input-group">
+        <input
+          [(ngModel)]="signupModel.mobile"
+          name="phone"
+          type="text"
+          placeholder="Phone Number"
+          required
+          [ngModelOptions]="{ standalone: true }"
+          #phone="ngModel"
+          pattern="^\+?[0-9]{10,15}$"
+        />
+        <div *ngIf="phone.touched && phone.invalid" class="error">
+          <small *ngIf="phone.errors?.['required']">Phone number is required</small>
+          <small *ngIf="phone.errors?.['pattern']">Invalid phone number format</small>
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="input-group">
+        <input
+          [(ngModel)]="signupModel.password"
+          name="password"
+          type="password"
+          placeholder="Password"
+          required
+          minlength="6"
+          [ngModelOptions]="{ standalone: true }"
+          #password="ngModel"
+        />
+        <div *ngIf="password.touched && password.invalid" class="error">
+          <small *ngIf="password.errors?.['required']">Password is required</small>
+          <small *ngIf="password.errors?.['minlength']">Password must be at least 6 characters long</small>
+        </div>
+      </div>
+
+      <!-- CAPTCHA -->
+      <div class="captcha-container">
+        <label for="captcha" class="captcha-label">Enter the text you see:</label>
+        <div class="captcha-box">
+          <span class="captcha-text">{{ captcha }}</span>
+          <button type="button" (click)="generateCaptcha()" class="refresh-captcha">
+            &#x21bb;
+          </button>
+        </div>
+        <input
+          type="text"
+          [(ngModel)]="captchaInput"
+          placeholder="Enter CAPTCHA"
+          name="captchaInput"
+          required
+          class="captcha-input"
+        />
+        <div *ngIf="captchaError" class="error-message">
+          Invalid CAPTCHA. Please try again.
+        </div>
+      </div>
+
+     
+      <button type="submit" [disabled]="!signupForm.valid || captchaError" class="submit-btn">
+        Sign Up
+      </button>
+    </form>
+
+    <div class="switch">
+      <label routerLink="/login">Already have an account? <span>Login</span></label>
+    </div>
+  </div>
+</div>

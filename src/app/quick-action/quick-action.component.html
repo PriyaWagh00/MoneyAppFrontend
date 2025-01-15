@@ -1,0 +1,37 @@
+<div class="transaction-container">
+  <h2>Money Transfer</h2>
+  <div>
+    <label for="senderId">Sender ID:</label>
+    <input type="number" [(ngModel)]="senderId" id="senderId" />
+
+    <label for="receiverId">Receiver ID:</label>
+    <input type="number" [(ngModel)]="receiverId" id="receiverId" />
+
+    <label for="amount">Amount:</label>
+    <input type="number" [(ngModel)]="amount" id="amount" />
+
+    <button (click)="transferMoney()">Transfer Money</button>
+  </div>
+
+  <p>{{ transactionMessage }}</p>
+
+  <hr />
+
+  <!-- <h2>Transaction History</h2>
+  <div>
+    <label for="userId">User ID:</label>
+    <input type="number" [(ngModel)]="userId" id="userId" />
+
+    <button (click)="fetchTransactionHistory()">Get History</button>
+  </div>
+
+  <div *ngIf="transactionHistory.length > 0">
+    <h3>History</h3>
+    <ul>
+      <li *ngFor="let transaction of transactionHistory">
+        From: {{ transaction.senderId }}, To: {{ transaction.receiverId }}, 
+        Amount: {{ transaction.amount }}, Date: {{ transaction.date }}
+      </li>
+    </ul>
+  </div> -->
+</div>

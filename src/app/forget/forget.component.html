@@ -1,0 +1,162 @@
+<!-- <div class="container">
+    <div class="form-container">
+      <h2>Forget Password</h2>
+  
+      <div *ngIf="message" class="info-message">
+        {{ message }}
+      </div>
+  
+      <form (ngSubmit)="onForgetPasswordSubmit()">
+        <div class="input-group">
+          <input
+            type="email"
+            [(ngModel)]="email"
+            placeholder="Enter your email"
+            name="email"
+            required
+          />
+        </div>
+  
+        <button type="submit" class="submit-btn">Send Reset Link</button>
+      </form>
+      <br><br>
+
+    </div>  </div>
+    
+  -->
+
+
+<!-- 
+  <div class="container">
+    <div class="form-container">
+      <h2>Forget Password</h2>
+  
+      <div *ngIf="message" class="info-message">
+        {{ message }}
+      </div>
+  
+      <form>
+        <div class="input-group">
+          <input
+            type="email"
+            [(ngModel)]="email"
+            placeholder="Enter your email"
+            name="email"
+            required
+          />
+        </div>
+  
+      
+        <div class="captcha-container">
+          <label for="captcha">Enter the text you see:</label>
+          <div class="captcha">
+            <span class="captcha-text">{{ captcha }}</span>
+            <button type="button" (click)="generateCaptcha()" class="refresh-captcha">
+              &#x21bb; 
+            </button>
+          </div>
+          <input
+            type="text"
+            [(ngModel)]="captchaInput"
+            placeholder="Enter CAPTCHA"
+            name="captchaInput"
+            required
+          />
+        </div>
+  
+        <button
+          type="button"
+          class="submit-btn"
+          [disabled]="!isCaptchaValid()"
+          (click)="onForgetPasswordSubmit()"
+        >
+          Send Reset Link
+        </button>
+      </form>
+    </div>
+  </div>
+   -->
+
+
+   <div class="container">
+    <div class="form-container">
+      <h2>Forget Password</h2>
+  
+   
+      <div *ngIf="message" class="info-message">
+        {{ message }}
+      </div>
+  
+      <form>
+        <div class="input-group">
+          <input
+            type="email"
+            [(ngModel)]="email"
+            placeholder="Enter your email"
+            name="email"
+            required
+          />
+        </div>
+  
+       
+        <!-- <div class="captcha-container">
+          <label for="captcha">Enter the text you see:</label>
+          <div class="captcha">
+            <span class="captcha-text">{{ captcha }}</span>
+            <button type="button" (click)="generateCaptcha()" class="refresh-captcha">
+              &#x21bb; 
+            </button>
+          </div>
+          <input
+            type="text"
+            [(ngModel)]="captchaInput"
+            placeholder="Enter CAPTCHA"
+            name="captchaInput"
+            required
+          />
+  
+          <div *ngIf="captchaError" class="error-message">
+            Invalid CAPTCHA. Please try again.
+          </div>
+        </div> -->
+
+
+
+        
+  <div class="captcha-container">
+    <label for="captcha" class="captcha-label">Enter the text you see:</label>
+    <div class="captcha-box">
+      <span class="captcha-text">{{ captcha }}</span>
+      <button type="button" (click)="generateCaptcha()" class="refresh-captcha">
+        &#x21bb; <!-- Refresh icon -->
+      </button>
+    </div>
+    <input
+      type="text"
+      [(ngModel)]="captchaInput"
+      placeholder="Enter CAPTCHA"
+      name="captchaInput"
+      class="captcha-input"
+      required
+    />
+  
+    <!-- Show CAPTCHA error if input is invalid -->
+    <div *ngIf="captchaError" class="error-message">
+      Invalid CAPTCHA. Please try again.
+    </div>
+  </div>
+  
+  
+  
+        <button
+          type="button"
+          class="submit-btn"
+          [disabled]="!email || !captchaInput"
+          (click)="onForgetPasswordSubmit()"
+        >
+          Send Reset Link
+        </button>
+      </form>
+    </div>
+  </div>
+  

@@ -1,0 +1,27 @@
+.transaction-container {
+  margin: 20px;
+}
+
+.transaction-container label {
+  margin-right: 10px;
+}
+
+.transaction-container input {
+  margin-bottom: 10px;
+}
+
+.transaction-container button {
+  margin: 10px 0;
+}
+
+.transaction-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.transaction-container li {
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

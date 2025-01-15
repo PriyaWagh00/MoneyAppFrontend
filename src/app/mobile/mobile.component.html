@@ -1,0 +1,183 @@
+   <!-- <div class="transaction-container">
+    <div class="card">
+      <div class="card-header text-center">
+        <h2>💸 Mobile Money Transfer</h2>
+      </div>
+  
+      <div class="card-body">
+      
+        <div *ngIf="message" class="message">
+          {{ message }}
+        </div>
+  
+        
+        <form class="transfer-form">
+          <div class="form-group">
+            <label for="receiverMobile" class="form-label">📱 Receiver Mobile</label>
+            <div class="input-group">
+              <input
+                type="text"
+                id="receiverMobile"
+                [(ngModel)]="receiverMobile"
+                name="receiverMobile"
+                class="form-control"
+                placeholder="Enter receiver's mobile number"
+                required
+              />
+              <button type="button" class="btn btn-outline-secondary" (click)="toggleDialpad()">
+                <i class="fas fa-phone-alt"></i>
+              </button>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="amount" class="form-label">💰 Amount</label>
+            <input
+              type="number"
+              id="amount"
+              [(ngModel)]="amount"
+              name="amount"
+              class="form-control"
+              placeholder="Enter amount to transfer"
+              required
+            />
+          </div>
+  
+          <button type="button" class="btn btn-primary btn-block mt-4" (click)="requestPin()">Transfer Money</button>
+        </form>
+  
+      
+        <div *ngIf="isPinRequired" class="pin-container mt-4">
+          <label for="pin" class="form-label">🔑 Enter PIN</label>
+          <input
+            type="password"
+            id="pin"
+            [(ngModel)]="pin"
+            name="pin"
+            class="form-control"
+            placeholder="Enter your 4-digit PIN"
+          />
+          <button class="btn btn-outline-danger mt-3" style="background-color: green;" (click)="onTransferMoney()">Submit PIN</button>
+        </div>
+      </div>
+  
+      <div class="card-footer text-center">
+        <button class="btn btn-outline-danger mt-3" (click)="onLogout()">Logout</button>
+      </div>
+    </div>
+  
+   
+    <div class="dialpad" *ngIf="isDialpadVisible" id="dialpad">
+      <div
+        class="dialpad-container"
+        (mousedown)="startDrag($event)"
+        (mouseup)="stopDrag()"
+        (mousemove)="dragDialpad($event)"
+      >
+        <div class="dialpad-header">
+          <h3>Enter Mobile Number</h3>
+          <button class="btn btn-close" (click)="toggleDialpad()">X</button>
+        </div>
+        <div class="dialpad-buttons">
+          <button *ngFor="let num of dialpad" class="dialpad-button" (click)="addNumber(num)">
+            {{ num }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+   -->
+
+
+
+   <div class="transaction-container">
+    <div class="card">
+      <div class="card-header text-center">
+        <h2>💸 Mobile Money Transfer</h2>
+      </div>
+  
+      <div class="card-body">
+        <div *ngIf="message" class="message">
+          {{ message }}
+        </div>
+  
+        <form class="transfer-form">
+          <div class="form-group">
+            <label for="receiverMobile" class="form-label">📱 Receiver Mobile</label>
+            <div class="input-group">
+              <input
+                type="text"
+                id="receiverMobile"
+                [(ngModel)]="receiverMobile"
+                (input)="onMobileInput()"
+                name="receiverMobile"
+                class="form-control"
+                placeholder="Enter receiver's mobile number"
+                required
+              />
+           
+            <button type="button" class="btn btn-outline-secondary" (click)="toggleDialpad()">
+              <i class="fas fa-phone-alt"></i>
+            </button> </div>
+            <div *ngIf="receiverName" class="username-display">
+              <strong>Send To: </strong> {{ receiverName }}
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="amount" class="form-label">💰 Amount</label>
+            <input
+              type="number"
+              id="amount"
+              [(ngModel)]="amount"
+              name="amount"
+              class="form-control"
+              placeholder="Enter amount to transfer"
+              required
+            />
+          </div>
+  
+          <button type="button" class="btn btn-primary btn-block mt-4" (click)="requestPin()">Transfer Money</button>
+        </form>
+  
+        <div *ngIf="isPinRequired" class="pin-container mt-4">
+          <label for="pin" class="form-label">🔑 Enter PIN</label>
+          <input
+            type="password"
+            id="pin"
+            [(ngModel)]="pin"
+            name="pin"
+            class="form-control"
+            placeholder="Enter your 4-digit PIN"
+          />
+          <button class="btn btn-outline-danger mt-3" style="background-color: green;" (click)="onTransferMoney()">Submit PIN</button>
+        </div>
+      </div>
+  
+      <div class="card-footer text-center">
+        <button class="btn btn-outline-danger mt-3" (click)="onLogout()">Logout</button>
+      </div>
+    </div>
+
+
+    <div class="dialpad" *ngIf="isDialpadVisible" id="dialpad">
+      <div
+        class="dialpad-container"
+        (mousedown)="startDrag($event)"
+        (mouseup)="stopDrag()"
+        (mousemove)="dragDialpad($event)"
+      >
+        <div class="dialpad-header">
+          <h3>Enter Mobile Number</h3>
+          <button class="btn btn-close" (click)="toggleDialpad()">X</button>
+        </div>
+        <div class="dialpad-buttons">
+          <button *ngFor="let num of dialpad" class="dialpad-button" (click)="addNumber(num)">
+            {{ num }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  

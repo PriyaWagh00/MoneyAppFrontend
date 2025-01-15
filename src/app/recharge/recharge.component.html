@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>Mobile Recharge</h2>
+  
+   
+    <label for="mobile">Mobile Number:</label>
+    <input
+      type="text"
+      id="mobile"
+      [(ngModel)]="mobileNumber"
+      (input)="onMobileInput()"
+      placeholder="Enter mobile number"
+    />
+    <p style="color: red;" *ngIf="mobileError">{{ mobileError }}</p>
+  
+
+    <p *ngIf="userName">User: {{ userName }}</p>
+  
+    
+    <label for="provider">Select Provider:</label>
+    <select id="provider" [(ngModel)]="selectedProvider" (change)="fetchPlans()">
+      <option value="">--Select Provider--</option>
+      <option value="Airtel">Airtel</option>
+      <option value="Jio">Jio</option>
+      <option value="Vi">Vi</option>
+    </select>
+  
+    <div *ngIf="plans.length > 0">
+      <h3>Available Plans for {{ selectedProvider }}</h3>
+      <ul>
+        <li *ngFor="let plan of plans">
+          Plan: ₹{{ plan.price }} - {{ plan.planName }}
+          <!-- <button (click)="recharge(plan.id)">Recharge</button> -->
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Display message -->
+    <p *ngIf="message" style="color: green;">{{ message }}</p>
+  </div>
+  

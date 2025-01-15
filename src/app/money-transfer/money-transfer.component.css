@@ -1,0 +1,81 @@
+/* General Styles */
+.info-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Card Styles */
+.info-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  flex: 1 1 calc(50% - 20px);
+  min-width: 300px;
+}
+
+.info-card h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  background-color: #0b3d91;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #062a68;
+}
+
+/* Option List */
+.investment-options, .travel-options {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  padding: 10px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.option:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.option i {
+  font-size: 1.5rem;
+  color: #0b3d91;
+}
+
+.option span {
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 500;
+}

@@ -1,0 +1,46 @@
+<div class="user-list-container">
+    <h2>Transfer Money To Contacts</h2>
+    <hr><br><hr><br>
+    <ul class="user-list">
+      <li *ngFor="let user of users">
+        <div class="user-card">
+          <div class="user-details">
+            <h3 class="user-name">{{ user.name }}</h3>
+            <p class="user-mobile">{{ user.mobile }}</p>
+            
+          </div>
+          <button (click)="transferMoney(user)" class="transfer-btn">
+            <i class="fas fa-arrow-right"></i> pay
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+
+
+<!-- 
+   <div class="user-list-container">
+    <h2>Transfer Money</h2>
+    <div class="sender-details">
+      <p><strong>Sender Name:</strong> {{ sender?.name }}</p>
+      <p><strong>Balance:</strong> ₹{{ sender?.balance }}</p>
+    </div>
+    <ul class="user-list">
+      <li *ngFor="let user of users">
+        <div class="user-card">
+          <div class="user-details">
+            <h3 class="user-name">{{ user.name }}</h3>
+            <p class="user-mobile">{{ user.mobile }}</p>
+          </div>
+          <button (click)="transferMoney(user)" class="transfer-btn">
+            <i class="fas fa-arrow-right"></i> Pay
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+     -->

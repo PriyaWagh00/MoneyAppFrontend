@@ -1,0 +1,109 @@
+.transaction-history {
+  font-family: 'Roboto', sans-serif;
+  margin: 20px auto;
+  max-width: 400px; /* Mobile-sized width */
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.transaction-history h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.error {
+  color: #d32f2f;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.transaction-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid; /* Color indicates type */
+}
+
+.transaction-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transaction-card .transaction-type {
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.transaction-card .transaction-type.sent {
+  color: #d32f2f;
+  background-color: #ffd5d5;
+  border-left-color: #d32f2f;
+}
+
+.transaction-card .transaction-type.received {
+  color: #388e3c;
+  background-color: #d4f8d4;
+  border-left-color: #388e3c;
+}
+
+.transaction-card .transaction-type.failed {
+  color: red;
+  background-color: orange;
+  border-left-color: #388e3c;
+}
+
+.transaction-card .transaction-time {
+  font-size: 0.8rem;
+  color: #757575;
+}
+
+.transaction-card .card-body {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transaction-card .transaction-name {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+.transaction-card .transaction-amount {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.no-history {
+  text-align: center;
+  font-size: 1rem;
+  color: #999;
+}
+
+
+#w {
+  padding: 10px;
+  background-color:skyblue;
+  color: red;
+  font-weight: 300;
+  margin-left: 100px;
+}
+
+
+
