@@ -1,8 +1,18 @@
 
-<app-pay></app-pay>
+<!-- <app-pay></app-pay> -->
 
 <div class="container">
   <div class="form-container">
+
+
+
+
+    <!-- Existing login form -->
+
+
+
+
+
     <h2>Login</h2>
 
     <div *ngIf="errorMessage" class="error-message">
@@ -41,6 +51,14 @@
       <button type="submit" class="submit-btn">Login</button>
     </form>
 
+    <button
+id="googleSignInButton"
+class="google-signin-btn"
+type="button"
+>
+<img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" />
+Sign in with Google
+</button>
     <div class="switch">
       <label routerLink="/signup">Don't have an account? <span>Sign Up</span></label>
       <br><br>

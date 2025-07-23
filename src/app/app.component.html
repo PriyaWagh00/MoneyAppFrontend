@@ -16,7 +16,10 @@
 
 
 <!-- Header (hidden on login page) -->
-<app-header *ngIf="!isLoginPage"></app-header>
+<!-- <app-header *ngIf="!isLoginPage" *ngIf="!isSignupPage"></app-header> -->
+
+<app-header *ngIf="!isLoginPage && !isSignupPage"></app-header>
+
 
 <!-- Router Outlet for routing -->
 <router-outlet></router-outlet>
@@ -30,4 +33,4 @@
 </div>
 
 <!-- Footer (hidden on login page) -->
-<app-footer *ngIf="!isLoginPage"></app-footer>
+<app-footer *ngIf="!isLoginPage && !isSignupPage"></app-footer>

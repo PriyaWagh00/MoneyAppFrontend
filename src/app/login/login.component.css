@@ -123,3 +123,28 @@ button {
 .switch label span:hover {
   text-decoration: underline;
 }
+
+
+
+
+.google-signin-btn {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+
+  img {
+    width: 20px;
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}

@@ -18,7 +18,7 @@ declare const gapi: any;
 export class LoginComponent  {
   loginModel = { email: '', password: '' };
   errorMessage: string | null = null;
-  private clientId = '483257834303-f1jj6na7ak0ag64ppjsquumav8ldm6bh.apps.googleusercontent.com'; // Replace with your Google client ID
+  private clientId = '483257803apps.googleusercontent.com'; 
 
   constructor(private userService: UserService, private router: Router) {}
 
@@ -74,41 +74,7 @@ export class LoginComponent  {
 
 
   
-//privious login below
 
-  // onLoginSubmit(): void {
-  //   if (this.loginModel.email) {
-  //     this.loginModel.email = this.loginModel.email.toLowerCase();
-  //   }
-  
-  //   if (!this.loginModel.email || !this.loginModel.password) {
-  //     this.errorMessage = 'Email and password are required';
-  //     return;
-  //   }
-  
-  //   this.userService.login(this.loginModel).subscribe({
-  //     next: (user) => {
-  //       if (user && user.name) {
-
-  //         this.userService.setUsername(user.name);
-  //         sessionStorage.setItem('username', user.name);
-  //         sessionStorage.setItem('senderId', user.id.toString()); 
-
-  //         sessionStorage.setItem('userRole', user.role); 
-         
-  //         if (user.role === 'ADMIN') {
-  //           this.router.navigate(['/admin']);
-  //         } else {
-  //           this.router.navigate(['/home']);
-  //         }
-  //       }
-  //     },
-  //     error: (err) => {
-      
-  //       this.errorMessage = err.error || 'Login failed. Please try again.';
-  //     },
-  //   });
-  // }
   
 
 //very imp login
@@ -150,40 +116,7 @@ export class LoginComponent  {
   
 
 
-  // onLoginSubmit(): void {
-  //   if (this.loginModel.email) {
-  //     this.loginModel.email = this.loginModel.email.toLowerCase(); // Normalize email to lowercase
-  //   }
-
-  //   // Basic validation for email and password fields
-  //   if (!this.loginModel.email || !this.loginModel.password) {
-  //     this.errorMessage = 'Email and password are required';
-  //     return;
-  //   }
-
-  //   // Call login service to authenticate the user
-  //   this.userService.login(this.loginModel).subscribe({
-  //     next: (user) => {
-  //       if (user && user.name) {
-  //         // Save user details in sessionStorage
-  //         sessionStorage.setItem('username', user.name);
-  //         sessionStorage.setItem('senderId', user.id.toString()); // Save logged-in user ID
-  //         sessionStorage.setItem('userRole', user.role); // Save user role (ADMIN or USER)
-
-  //         // Redirect based on the role
-  //         if (user.role === 'ADMIN') {
-  //           this.router.navigate(['/admin']);
-  //         } else {
-  //           this.router.navigate(['/home']);
-  //         }
-  //       }
-  //     },
-  //     error: (err: HttpErrorResponse) => {
-  //       this.errorMessage = err.error?.message || 'Login failed. Please try again.';
-  //     }
-  //   });
-  // }
-
+  
 
 
 

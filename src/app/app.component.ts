@@ -65,6 +65,7 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   isHomePage: boolean = false;
   isLoginPage: boolean = false;
+  isSignupPage:boolean=false;
 
   constructor(private router: Router) {}
 
@@ -75,6 +76,7 @@ export class AppComponent {
         // Check if the current route is 'home' or 'login'
         this.isHomePage = this.router.url === '/home';
         this.isLoginPage = this.router.url === '/login';
+        this.isSignupPage=this.router.url==='/signup';
       }
     });
   }

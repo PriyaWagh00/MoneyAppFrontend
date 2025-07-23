@@ -16,6 +16,7 @@ import { ResetComponent } from './reset/reset.component';
 import { RechargeComponent } from './recharge/recharge.component';
 import { FailedComponent } from './failed/failed.component';
 import { NotificationComponent } from './notification/notification.component';
+import { AdminComponent } from './admin/admin.component';
 // import { SignupComponent } from './signup/signup.component';
 // import { SigupComponent } from './signup/signup.component';
 
@@ -58,6 +59,8 @@ export const routes: Routes = [
     path:'recharge',component:RechargeComponent
 },{
     path:'notification',component:NotificationComponent
-},
+},{
+    path:'admin',component:AdminComponent
+}
 
 ];

@@ -15,7 +15,7 @@ declare const gapi: any;
 export class SignupComponent implements OnInit {
 //   signupModel = { name: '', email: '', password: '',mobile:'+91 ' };
 //   errorMessage: string = '';
-//   clientId: string = '483257834303-f1jj6na7ak0ag64ppjsquumav8ldm6bh.apps.googleusercontent.com'; 
+//   clientId: string = 'apps.googleusercontent.com'; 
 
 //   constructor(private userService: UserService, private router: Router) {}
 
